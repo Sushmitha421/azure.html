@@ -1,163 +1,120 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Meesho Home Page Clone</title>
+  <meta charset="UTF-8">
+  <title>FOOD ITEMS</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <style>
     body {
       margin: 0;
       font-family: Arial, sans-serif;
-      background-color: #f6f6f6;
+      background: #f5f5f5;
     }
-    /* Header */
+
     header {
       background: #fff;
-      padding: 12px 24px;
+      padding: 15px 40px;
       display: flex;
-      align-items: center;
       justify-content: space-between;
-      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
-      position: sticky;
-      top: 0;
-      z-index: 100;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.1);
     }
+
     .logo {
-      font-size: 24px;
+      color: #fc8019;
+      font-size: 28px;
       font-weight: bold;
-      color: #e80071;
     }
-    .search-bar input {
-      width: 400px;
-      padding: 8px 12px;
-      border-radius: 4px;
-      border: 1px solid #ccc;
-    }
-    .header-links a {
+
+    nav a {
       margin-left: 20px;
       text-decoration: none;
       color: #333;
-      font-size: 14px;
+      font-weight: 600;
     }
 
-    /* Categories */
-    .categories {
-      background: #fff;
-      display: flex;
-      justify-content: space-around;
-      padding: 12px 0;
-      border-bottom: 1px solid #ddd;
-    }
-    .categories div {
-      font-size: 14px;
-      cursor: pointer;
-    }
-
-    /* Banner */
-    .banner {
-      margin: 20px auto;
-      width: 90%;
-      background: linear-gradient(90deg, #f857a6, #ff5858);
-      color: #fff;
-      padding: 40px;
-      border-radius: 8px;
+    .hero {
+      background: #fc8019;
+      color: white;
+      padding: 60px 40px;
       text-align: center;
-      font-size: 24px;
-      font-weight: bold;
     }
 
-    /* Products */
-    .products {
-      width: 90%;
-      margin: auto;
+    .hero input {
+      padding: 12px;
+      width: 260px;
+      border: none;
+      border-radius: 4px;
+    }
+
+    .hero button {
+      padding: 12px 20px;
+      border: none;
+      background: #333;
+      color: white;
+      cursor: pointer;
+      margin-left: 5px;
+    }
+
+    .section {
+      padding: 40px;
+    }
+
+    .cards {
       display: grid;
-      grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
       gap: 20px;
     }
-    .product-card {
-      background: #fff;
-      border-radius: 6px;
-      padding: 10px;
-      box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-    }
-    .product-card img {
-      width: 100%;
-      border-radius: 6px;
-    }
-    .product-card h4 {
-      font-size: 14px;
-      margin: 8px 0;
-    }
-    .price {
-      color: #e80071;
-      font-weight: bold;
-    }
-    .delivery {
-      font-size: 12px;
-      color: green;
+
+    .card {
+      background: white;
+      padding: 15px;
+      border-radius: 8px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
     }
 
     footer {
-      margin-top: 40px;
-      background: #fff;
-      padding: 20px;
+      background: black;
+      color: #ccc;
       text-align: center;
-      font-size: 13px;
-      color: #666;
+      padding: 20px;
     }
   </style>
 </head>
+
 <body>
 
-  <header>
-    <div class="logo">meesho</div>
-    <div class="search-bar">
-      <input type="text" placeholder="Try Saree, Kurti or Search by Product Code" />
-    </div>
-    <div class="header-links">
-      <a href="#">Download App</a>
-      <a href="#">Become a Supplier</a>
-      <a href="#">Profile</a>
-      <a href="#">Cart</a>
-    </div>
-  </header>
+<header>
+  <div class="logo">Swiggy</div>
+  <nav>
+    <a href="#">Search</a>
+    <a href="#">Offers</a>
+    <a href="#">Help</a>
+    <a href="#">Sign In</a>
+    <a href="#">Cart</a>
+  </nav>
+</header>
 
-  <div class="categories">
-    <div>Women Ethnic</div>
-    <div>Women Western</div>
-    <div>Men</div>
-    <div>Kids</div>
-    <div>Home & Kitchen</div>
-    <div>Beauty & Health</div>
-    <div>Jewellery</div>
-    <div>Bags & Footwear</div>
+<section class="hero">
+  <h1>Order food from your favourite restaurants</h1>
+  <p>Fast delivery | Best offers</p>
+  <input type="text" placeholder="Enter delivery location">
+  <button>Search</button>
+</section>
+
+<section class="section">
+  <h2>Popular Restaurants</h2>
+  <div class="cards">
+    <div class="card">Biryani House ⭐ 4.3</div>
+    <div class="card">Pizza Hub ⭐ 4.5</div>
+    <div class="card">Burger King ⭐ 4.2</div>
+    <div class="card">Sweet Treats ⭐ 4.6</div>
   </div>
+</section>
 
-  <div class="banner">
-    Lowest Prices ✨ Best Quality Shopping
-  </div>
+<footer>
+  © 2026 Swiggy Clone – For Learning Purpose Only
+</footer>
 
-  <section class="products">
-    <div class="product-card">
-      <img src="https://via.placeholder.com/200x250" alt="Product" />
-      <h4>Women Printed Kurti</h4>
-      <div class="price">₹299</div>
-      <div class="delivery">Free Delivery</div>
-    </div>
-
-    <div class="product-card">
-      <img src="https://via.placeholder.com/200x250" alt="Product" />
-      <h4>Stylish Saree</h4>
-      <div class="price">₹499</div>
-      <div class="delivery">Free Delivery</div>
-    </div>
-
-    <div class="product-card">
-      <img src="https://via.placeholder.com/200x250" alt="Product" />
-      <h4>Men Casual Shirt</h4>
-      <div class="price">₹399</div>
-      <div class="delivery">Free Delivery</div>
-    </div>
-
-    <div class="product-card">
-      <img src="https://via.placeholder.com/200x250" alt="Produc
+</body>
+</html>
